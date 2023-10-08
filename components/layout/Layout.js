@@ -1,16 +1,26 @@
 
+import Link from "next/link";
+import styles from "./Layout.module.css";
+
 function Layout({children}) {
     return (
         <>
-        <header>
-            BotoFood
-        </header>
-        <div>
-            {children}
+         <header className={styles.header}>
+        <div className={styles.left}>
+          <Link href="/">BotoFood</Link>
         </div>
-        <footer>
-            Next.js Test BotoFood App project
-        </footer>
+        <div className={styles.right}>
+          <Link href="/menu">Menu</Link>
+          <Link href="/categories">Categories</Link>
+        </div>
+      </header>
+      <div className={styles.container}>{children}</div>
+      <footer className={styles.footer}>
+        <a href="/" target="_blank" rel="noreferrer">
+          Botostart
+        </a>
+        Next.js Test | BotoFood Project &copy;
+      </footer>
         </>
         
     )
