@@ -3,7 +3,7 @@
 export default function Home() {
   return (
     <div >
-      boto car
+      Boto Food
     </div>
   )
 }
